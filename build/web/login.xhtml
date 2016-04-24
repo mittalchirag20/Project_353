@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Login page</title>
+    </h:head>
+    <h:body>
+        <center>
+        <table>
+        <tr>
+        <td>
+            <div style="background-color: lightgray ;border: 1px solid black; padding: 20px; text-align: center; height: 300px; width: 300px">
+        <h2>Login</h2><br/>
+        <h:form>
+            <h:panelGrid columns="2" columnClasses="evenColumns, oddColumns">
+            User ID: <h:inputText id="userID" value="#{loginController.theModel.userID}">
+                <f:validateLength minimum="6"></f:validateLength>            
+                <h:message errorStyle="color:red; display:block" for="userID" ></h:message>
+                <f:validateRequired />
+            </h:inputText>
+            Password: <h:inputSecret id="password" value="#{loginController.theModel.password}">
+                <f:validateLength minimum="8"></f:validateLength>
+                <h:message errorStyle="color:red; display:block" for="password" ></h:message>
+            </h:inputSecret>
+            <h:commandButton id="submitID" value="Submit" action="#{loginController.authenticate()}"/> &nbsp; <h:button value="Cancel" outcome="homepage.xhtml?faces-redirect=true"></h:button> 
+            </h:panelGrid>
+            
+        </h:form>
+            
+            </div>
+        </td>
+            
+            <td>
+                <div style="background-color: lightgray ;border: 1px solid black; padding: 20px; text-align: center; height: 300px; width: 300px"><br/>
+                    <h2> New User have to register first</h2><br/>
+                    <h:form>
+                        <h:commandButton id="signup" value="Register" action="signUp.xhtml?faces-redirect=true"/></h:form>
+                </div> </td>
+        </tr>
+        </table>   
+        </center>
+    </h:body>
+</html>
+

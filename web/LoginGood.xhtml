@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html 
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Login successful</title>
+        <f:event listener="#{loginController.isAdmin}" type="preRenderView" />
+    </h:head>
+    
+    <h:body>
+        <h:form>
+        <h:graphicImage value="#{resource['images:wave.med.gif']}"/>
+        <h3>
+            <h:outputText id="result" escape="false" value="#{loginController.name}"></h:outputText>
+        </h3>
+  <!--      Please enter your user ID to update your personal information: 
+        <h:inputText id="userID" value="{updateController.theModel.userID}">        
+                <h:message errorStyle="color:red; display:block" for="userID" ></h:message>
+        </h:inputText>
+  -->
+        <h:commandButton id="updateID" value="Update profile" action="#{loginController.retrieveProfile()}"/><br></br>
+        <h:commandButton id="back" value="SignOut" action="signOut.xhtml?faces-redirect=true"/>
+    </h:form>    </h:body>
+</html>
+

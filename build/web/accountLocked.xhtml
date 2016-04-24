@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html 
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Account locked</title>
+    </h:head>
+    <h:body>
+        <h2>YOUR ACCOUNT HAS BEEN LOCKED</h2>
+        <h:form>
+        <h:graphicImage value="#{resource['images:wave.med.gif']}"/>
+        <h3><h:outputText id="result" escape="false" value="You have failed to login more than 3 time"></h:outputText>
+  </h3>
+        <h:commandButton id="back" value="Back to Login Page" action="login.xhtml?faces-redirect=true"/>
+    </h:form>    </h:body>
+</html>
+

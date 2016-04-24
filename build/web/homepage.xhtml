@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Homepage</title>
+        <link rel="stylesheet" type="text/css" href="resources/css/myStyle.css"/>
+        <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.1.1.js"></script>
+        <script type="text/javascript" src="resources/javascript/canvas.js"></script>
+          <!-- Place this render call where appropriate. --><script type="text/javascript">
+            (function () {
+                var po = document.createElement('script');
+                po.type = 'text/javascript';
+                po.async = true;
+                po.src = 'https://apis.google.com/js/platform.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+    
+    </h:head>
+    <h:body class="page">
+        <table>
+            <tr>
+                <td>
+                    <div class="leftmenu">
+                        <br/><br/><br/><br/>
+                        <div style= "border: 1px solid Peru; background-color: greenyellow; text-align: center; padding: 18px; height: 30px">
+                            <h:form>
+                            <h:commandLink id="Home" value="HomePage" action="homepage.xhtml"/> </h:form></div>
+                        <br></br>
+                        
+                         <div style= "border: 1px solid Peru; background-color: greenyellow; text-align: center; padding: 18px; height: 30px">
+                             <h:form>
+                             <h:commandLink id="Donate" value="Donate a Meal" action="login.xhtml"/> </h:form></div>
+                        <br></br>
+                        
+                        <div style= "border: 1px solid Peru; background-color: greenyellow; text-align: center; padding: 18px; height: 30px">
+                             <h:form>
+                             <h:commandLink id="FAQ" value="FAQ" action="Faq.xhtml"/> </h:form></div>
+                        <br></br>
+                        
+                        <div style= "border: 1px solid Peru; background-color: greenyellow; text-align: center; padding: 18px; height: 30px">
+                             <h:form>
+                             <h:commandLink id="Contact" value="Contact Us" action="Contact.xhtml"/> </h:form></div>
+                        <br></br>
+                         <div style= "border: 1px solid Peru; background-color: greenyellow; text-align: center; padding: 18px; height: 30px">
+                             <h:form>
+                             <h:commandLink id="Subscribe" value="Subscribe" action="Subscribe.xhtml"/> </h:form></div>
+                        <br></br>
+                        
+                       
+                    
+                     <strong>Share:</strong><br></br><br></br>
+                        &nbsp;&nbsp;&nbsp;<div class="g-plus" data-action="share" data-width="120" data-href="https://google.com"></div><br></br>
+                        &nbsp;&nbsp;&nbsp;<iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Flocalhost%3A8080%2FProject_353%2Ffaces%2Fhomepage.xhtml;layout=button_count;mobile_iframe=true;width=86;height=20;appId" width="86" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0"></iframe>
+                        &nbsp;&nbsp;&nbsp;
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <canvas id="ex1" width="1000" height="1000"
+                                style="border: 1px solid #cccccc;">
+                            HTML5 Canvas not supported
+                        </canvas>
+                    </div>
+                </td>
+            </tr>
+        </table>
+         <!-- Place this tag in your head or just before your close body tag. -->
+        <script src="https://apis.google.com/js/platform.js" async="async" defer="defer"></script>
+    </h:body>
+</html>
+

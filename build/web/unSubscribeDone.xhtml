@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core">
+
+<h:body>
+
+  <h1>Successful Un-Subscription Page</h1>
+  <h3>
+      You have successfully un-subscribed from our mailing list !!!
+  </h3>
+
+  <h:form id="subscribe">
+
+  
+        <h:outputLabel for="emailID" value="Email ID : " />
+        <h:inputText id="emailID" value="#{profile.emailID}" required="true"
+		requiredMessage="Please enter emailID" >
+       
+        </h:inputText>
+        
+        
+        <br/><br/>
+	<h:message for="emailID" style="color: red;" />
+        
+        <h:commandButton id="submitID" value="Subscribe" action="#{profile.subscribe()}"/> &nbsp; <h:button value="Home Page" outcome="homepage.xhtml?faces-redirect=true"></h:button>
+
+  </h:form>
+
+</h:body>
+</html>
+
+

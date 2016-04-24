@@ -1,0 +1,28 @@
+.page{
+    background-color: lightskyblue;
+}
+
+.heading{
+    background-color: darkgrey;
+    font-family: monospace;
+    position: absolute;
+}
+
+.leftmenu{
+    background-color: darkgrey;
+    font-family: sans-serif;
+    width: 250px;
+    height: 1000px;
+}
+
+.price{
+    
+    background-color: darkgrey;
+    background-position: center;
+    font-family: monospace;
+    position: absolute; 
+    top: 120px;
+    left: 40px; 
+    width: 240px; 
+    height: 200px; 
+}

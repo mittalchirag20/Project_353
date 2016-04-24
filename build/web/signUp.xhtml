@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Homepage</title>
+        <h:outputStylesheet library="css" name="styles.css"/>
+        <h:outputScript library="javascript" name="checkPassword.js"/>
+    </h:head>
+    <h:body>
+        <h2>Sign up form</h2><br/>
+        <h:form>
+            <h:panelGrid columns="2" columnClasses="evenColumns, oddColumns">
+            First name: <h:inputText id="firstName" value="#{loginController.theModel.firstName}">
+                <f:validateLength minimum="2" maximum="25"></f:validateLength>            
+                <h:message errorStyle="color:red; display:block" for="firstName" ></h:message>
+                <f:validateRequired />
+            </h:inputText>
+            Last name: <h:inputText id="lastName" value="#{loginController.theModel.lastName}">
+                <f:validateLength minimum="2" maximum="25"></f:validateLength>            
+                <h:message errorStyle="color:red; display:block" for="lastName" ></h:message>
+                <f:validateRequired />
+                  </h:inputText>
+             
+               
+            
+               
+                
+          
+            User ID: <h:inputText id="userID" value="#{loginController.theModel.userID}">
+                <f:validateLength minimum="6"></f:validateLength>            
+                <h:message errorStyle="color:red; display:block" for="userID" ></h:message>
+                <f:validateRequired />
+            </h:inputText> &nbsp;
+            
+            <h:commandButton id="checkID" value="Check Availability" action="#{loginController.checkUserID()}"/><br></br>
+            <h:outputText value="#{loginController.availableStat}" id="updateStatus"/>
+            Password: <h:inputSecret id="password" value="#{loginController.theModel.password}">
+                <f:validateLength minimum="8"></f:validateLength>
+                <h:message errorStyle="color:red; display:block" for="password" ></h:message>
+                <f:validateRequired />	
+            </h:inputSecret>
+            Confirm Password: <h:inputSecret id="confirmPwd" value="#{loginController.theModel.confirmPwd}">
+                <f:validateLength minimum="8"></f:validateLength>
+                <h:message errorStyle="color:red; display:block" for="confirmPwd" ></h:message>
+                <f:validateRequired />	
+            </h:inputSecret>
+            
+            Email ID: <h:inputText id="emailID" value="#{loginController.theModel.emailID}">
+                <f:validateLength minimum="6" ></f:validateLength>            
+                <h:message errorStyle="color:red; display:block" for="emailID" ></h:message>
+                <f:validateRequired />
+            </h:inputText>
+             Address: Street  <h:inputText id="street" value="#{loginController.theModel.street}">
+                <f:validateLength minimum="2" maximum="25"></f:validateLength>            
+                <h:message errorStyle="color:red; display:block" for="street" ></h:message>
+                <f:validateRequired />
+                  </h:inputText>
+                City  <h:inputText id="city" value="#{loginController.theModel.city}">
+                <f:validateLength minimum="2" maximum="25"></f:validateLength>            
+                <h:message errorStyle="color:red; display:block" for="city" ></h:message>
+                <f:validateRequired />
+                </h:inputText>
+                
+                State : <h:selectOneMenu
+                id="state"
+                value="#{loginController.theModel.state}">
+                <f:selectItem id="Illinois" itemLabel="Illinois" itemValue="Illinois" />
+                <f:selectItem id="Alaska" itemLabel="Alaska" itemValue="Alaska" />
+                <f:selectItem id="Alabama" itemLabel="Alabama" itemValue="Alabama" />
+                <f:selectItem id="Other" itemLabel="Other" itemValue="Other" />
+            </h:selectOneMenu><br/><br/>
+                
+            
+            Country : <h:selectOneMenu
+                id="country"
+                value="#{loginController.theModel.country}">
+                <f:selectItem id="USA" itemLabel="USA" itemValue="USA" />
+                <f:selectItem id="India" itemLabel="India" itemValue="India" />
+                <f:selectItem id="China" itemLabel="China" itemValue="China" />
+              
+            </h:selectOneMenu><br/><br/>
+            Security question: <h:inputText id="securityQue" value="#{loginController.theModel.securityQue}">
+                <f:validateLength minimum="2"></f:validateLength>            
+                <h:message errorStyle="color:red; display:block" for="securityQue" ></h:message>
+                <f:validateRequired />
+            </h:inputText>
+            Security answer: <h:inputText id="securityAns" value="#{loginController.theModel.securityAns}">
+                <f:validateLength minimum="2"></f:validateLength>            
+                <h:message errorStyle="color:red; display:block" for="securityAns" ></h:message>
+                <f:validateRequired />
+            </h:inputText>
+             Security question: <h:inputText id="securityQue1" value="#{loginController.theModel.securityQue1}">
+                <f:validateLength minimum="2"></f:validateLength>            
+                <h:message errorStyle="color:red; display:block" for="securityQue" ></h:message>
+                <f:validateRequired />
+            </h:inputText>
+            Security answer: <h:inputText id="securityAns1" value="#{loginController.theModel.securityAns1}">
+                <f:validateLength minimum="2"></f:validateLength>            
+                <h:message errorStyle="color:red; display:block" for="securityAns" ></h:message>
+                <f:validateRequired />
+            </h:inputText>
+            <h:commandButton id="submitID" value="Submit" onclick="return checkPassword(this.form)" action="#{loginController.signUp()}"/> &nbsp; <h:button value="Cancel" outcome="login.xhtml?faces-redirect=true"></h:button>
+            </h:panelGrid>
+        </h:form>
+
+    </h:body>
+</html>
+
